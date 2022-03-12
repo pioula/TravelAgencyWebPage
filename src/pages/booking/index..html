@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking</title>
+</head>
+<body>
+    <header>
+        <figure>
+            <img src="../../assets/logo.png" alt="logo">
+        </figure>
+
+        <nav>
+            <ul>
+                <li>
+                    <a href="#">
+                        Plane trips
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Bus trips
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        My account
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <form autocomplete="on">
+                <label for="fname">First name:</label><br>
+                <input type="text" name="fname" required><br>
+
+                <label for="lname">Last name:</label><br>
+                <input type="text" name="lname" required><br>
+
+                <label for="telnum">Telephone number:</label><br>
+                <input 
+                    type="tel" 
+                    name="telnum"
+                    pattern="+[0-9]{2}-[0-9]{3}-[0-9]{3}-[0-9]{3}"
+                    required><br>
+
+                <label for="npeople">Number of people:</label><br>
+                <input 
+                    type="number" 
+                    name="npoeple"
+                    min="1"
+                    required><br>
+
+                <label for="arrival_date">Date of the arrival:</label><br>
+                <input 
+                    type="date" 
+                    name="arrival_date"
+                    required><br>
+
+                <label for="departure_date">Date of the departure:</label><br>
+                <input 
+                    type="date" 
+                    name="departure_date"
+                    required><br>
+
+                <input type="submit" value="Submit">
+            </form>
+        </section>
+
+        <section>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            Number of people
+                        </td>
+                        <td>
+                            0
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Number of days
+                        </td>
+                        <td>
+                            0
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Total price
+                        </td>
+                        <td>
+                            0
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <div>
+            <p>Travel agency, 2022</p>
+        </div>
+
+        <div>
+            <a href="#">About</a>
+        </div>
+
+        <div>
+            <a href="#">Privacy politics</a>
+        </div>
+
+        <div>
+            <a href="#">Contact</a>
+        </div>
+    </footer>
+</body>
+</html>
