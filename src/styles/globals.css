@@ -1,0 +1,59 @@
+body {
+    background-color: #F7E1D0;
+    padding: 0px;
+    margin: 0px;
+}
+body > footer {
+    background-color: #F7D0E3;
+    margin: 0;
+}
+body > header {
+    background-color: #D6BEB4;
+    margin: 0;
+    padding: 0;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: sans-serif;
+}
+article h1 {
+    font-size: xx-large;
+}
+
+body > header {
+    display: inline-flex;
+    padding: 5px;
+    overflow: hidden;
+    width: 100%;
+}
+
+body > header > figure {
+    height: 78px;
+    width: 200px;
+}
+body > header > figure > img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+nav {
+    float: right;
+}
+
+nav > ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+nav > ul > li {
+    float: right;
+}
+nav > ul > li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
