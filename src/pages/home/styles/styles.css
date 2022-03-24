@@ -1,4 +1,5 @@
 body > main {
+    padding-right: 10%;
     grid-area: main;
 }
 
@@ -22,4 +23,48 @@ body {
     "header header"
     "main aside"
     "footer footer";
+}
+
+.offer_img {
+    max-width: 100%;
+    grid-area: img;
+}
+
+.offer_img > img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.offer_article {
+    margin-top: auto;
+    margin-bottom: auto;
+    grid-area: article
+}
+
+.offer {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "img article"
+}
+
+h1 {
+    padding: 0;
+    margin: 0 5px 0 0;
+}
+
+p {
+    margin: 0px;
+}
+
+.offer_description {
+    font-size: 20px;
+}
+
+.offer_footer {
+    font-size: 15px;
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-between;
 }
