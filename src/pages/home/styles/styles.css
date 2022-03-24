@@ -1,0 +1,25 @@
+body > main {
+    grid-area: main;
+}
+
+body > aside {
+    grid-area: aside;
+}
+
+body > header {
+    grid-area: header;
+}
+
+body > footer {
+    grid-area: footer;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 80% 20%;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "header header"
+    "main aside"
+    "footer footer";
+}

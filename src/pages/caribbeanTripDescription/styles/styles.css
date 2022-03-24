@@ -27,20 +27,19 @@ button {
   font-size: 16px;
   margin: 10px;
 }
-.left-button {
-    left: 0px;
-    margin-left: 100px;
+
+.buttons {
+    display: inline-flex;
+    justify-content: space-between;
+    width: 100%;
 }
-.right-button {
-    float: right;
-    margin-right: 100px;
-}
+
 button:hover {
-  background-color: #C9B4D6; /* Green */
+  background-color: #C9B4D6;
   color: white;
 }
 
-article {
+main {
     max-width: 60%;
     margin-left: 20%;
     margin-right: 20%;
