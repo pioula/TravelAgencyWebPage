@@ -1,7 +1,6 @@
 .cuba {
     float: left;
-    width: 40%;
-    height: 40%;
+    width: 300px;
     margin: 10px;
 }
 article ul > li {
