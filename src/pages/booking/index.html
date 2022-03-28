@@ -5,12 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../styles/globals.css"> 
+    <link rel="stylesheet" href="../booking/styles/styles.css"> 
     <title>Booking</title>
-    <script type="module">
-        import { komunikat } from './services/modul.mjs';
-
-        console.log(komunikat);
-    </script>
 </head>
 <body>
     <header>
@@ -57,20 +53,27 @@
     <main>
         <section>
             <form autocomplete="on" name="booking_form">
-                <label for="fname">First name:</label><br>
-                <input type="text" name="fname" id="fname"><br>
-
-                <label for="lname">Last name:</label><br>
-                <input type="text" name="lname" id="lname"><br>
-
-                <label for="telnum">Telephone number:</label><br>
-                <input 
-                    type="tel" 
-                    name="telnum"
-                    pattern="+[0-9]{2}-[0-9]{3}-[0-9]{3}-[0-9]{3}"
-                    ><br>
-
-                <label for="npeople">Number of people:</label><br>
+                <section class="form_name_input">
+                    <label>First name:</label>
+                    <input type="text" name="fname" id="fname">
+                    <p id="input_error">This field cannot be empty or has more than 39 characters</p>
+                </section>
+                
+                <section class="form_name_input">
+                    <label>Last name:</label>
+                    <input type="text" name="lname" id="lname">
+                    <p id="input_error">This field cannot be empty or has more than 39 characters</p>
+                </section>
+        
+                <!-- <section>
+                    <label for="telnum">Telephone number:</label>
+                    <input 
+                        type="tel" 
+                        name="telnum"
+                        pattern="+[0-9]{2}-[0-9]{3}-[0-9]{3}-[0-9]{3}"
+                        >
+                </section>
+                                <label for="npeople">Number of people:</label><br>
                 <input 
                     type="number" 
                     name="npoeple"
@@ -87,7 +90,7 @@
                 <input 
                     type="date" 
                     name="departure_date"
-                    ><br>
+                    ><br> -->
 
                 <button type="submit">Submit</button>
             </form>

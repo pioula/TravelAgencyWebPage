@@ -1,0 +1,23 @@
+form > section {
+  width: 100%;
+  display: inline-flex;
+  justify-content: left;
+  padding: 10px;
+}
+
+#input_error {
+  margin: 0;
+  padding-left: 10px;
+  color: #FF0000;
+  display: none;
+}
+
+section > label {
+  display: inline-block;
+  padding-right: 5px;
+}
+
+section > input {
+  display: inline-block;
+}
+
