@@ -56,38 +56,38 @@
 
     <main>
         <section>
-            <form autocomplete="on">
+            <form autocomplete="on" name="booking_form">
                 <label for="fname">First name:</label><br>
-                <input type="text" name="fname" required><br>
+                <input type="text" name="fname" id="fname"><br>
 
                 <label for="lname">Last name:</label><br>
-                <input type="text" name="lname" required><br>
+                <input type="text" name="lname" id="lname"><br>
 
                 <label for="telnum">Telephone number:</label><br>
                 <input 
                     type="tel" 
                     name="telnum"
                     pattern="+[0-9]{2}-[0-9]{3}-[0-9]{3}-[0-9]{3}"
-                    required><br>
+                    ><br>
 
                 <label for="npeople">Number of people:</label><br>
                 <input 
                     type="number" 
                     name="npoeple"
                     min="1"
-                    required><br>
+                    ><br>
 
                 <label for="arrival_date">Date of the arrival:</label><br>
                 <input 
                     type="date" 
                     name="arrival_date"
-                    required><br>
+                    ><br>
 
                 <label for="departure_date">Date of the departure:</label><br>
                 <input 
                     type="date" 
                     name="departure_date"
-                    required><br>
+                    ><br>
 
                 <button type="submit">Submit</button>
             </form>
@@ -143,5 +143,7 @@
             </ul>
         </nav>
     </footer>
+
+    <script type="text/javascript" src="./services/form_checker.mjs"></script>
 </body>
 </html>
