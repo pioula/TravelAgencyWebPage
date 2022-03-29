@@ -21,3 +21,6 @@ section > input {
   display: inline-block;
 }
 
+form {
+  width: 50%;
+}
