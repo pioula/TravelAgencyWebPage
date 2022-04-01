@@ -31,4 +31,4 @@ document.addEventListener('click', (event) => {
     event.target.style.borderColor = 'azure';
     previousInput = event.target;
   }
-});
+}, true);
