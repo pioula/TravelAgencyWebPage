@@ -21,16 +21,8 @@ function turnOffIncorrectInput(input) {
 
 function createModalBackground() {
   const modalBackground = document.createElement('div');
-  modalBackground.style.display = 'block';
-  modalBackground.style.position = 'fixed';
-  modalBackground.style.zIndex = 1;
-  modalBackground.style.paddingTop = '100px';
-  modalBackground.style.left = 0;
-  modalBackground.style.top = 0;
-  modalBackground.style.width = '100%';
-  modalBackground.style.height = '100%';
-  modalBackground.style.overflow = 'auto';
-  modalBackground.style.backgroundColor = 'rgba(0, 0, 0, 0.4)';
+  modalBackground.classList.add('modal_background');
+  console.log('siema');
   return modalBackground;
 }
 
@@ -49,11 +41,7 @@ function createModalSummary() {
 
 function createModalContent() {
   const modalContent = document.createElement('div');
-  modalContent.style.backgroundColor = '#fefefe';
-  modalContent.style.margin = 'auto';
-  modalContent.style.padding = '20px';
-  modalContent.style.border = '1px solid #888';
-  modalContent.style.width = '80%';
+  modalContent.classList.add('modal_content');
   return modalContent;
 }
 
