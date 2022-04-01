@@ -3,16 +3,20 @@ const bookingForm = document.forms.booking_form;
 const { fname, lname } = bookingForm.elements;
 
 const SECOND = 1000;
-const MODAL_CLEAR = 3;
+const MODAL_CLEAR_TIME = 3;
 
 function checkIfNameCorrect(input) {
-  return input.value === '' || input.value > 40;
+  return input.value === '' || input.value.length > 40;
 }
 
-function incorrectInput(input) {
-  input.style.backgroundColor = 'red';
-  input.style.borderColor = '#853B00';
+function turnOnIncorrectInput(input) {
+  input.classList.add('input_box_error');
   input.parentNode.querySelector('#input_error').style.display = 'block';
+}
+
+function turnOffIncorrectInput(input) {
+  input.classList.remove('input_box_error');
+  input.parentNode.querySelector('#input_error').style.display = 'none';
 }
 
 function createModalBackground() {
@@ -71,7 +75,7 @@ function generateSuccessModal() {
   const clearModalFunction = () => document.body.removeChild(modal);
   const closeModalTimeout = setTimeout(() => document
     .body
-    .removeChild(modal), MODAL_CLEAR * SECOND);
+    .removeChild(modal), MODAL_CLEAR_TIME * SECOND);
 
   const modalOkButton = createModalOkButton(closeModalTimeout, clearModalFunction);
 
@@ -81,18 +85,21 @@ function generateSuccessModal() {
   document.body.appendChild(modal);
 }
 
+// Checks if input is correct and then display a modal
 bookingForm.addEventListener('submit', (e) => {
   e.preventDefault();
   let isCorrect = true;
   if (checkIfNameCorrect(fname)) {
-    incorrectInput(fname);
+    turnOnIncorrectInput(fname);
     isCorrect = false;
   }
   if (checkIfNameCorrect(lname)) {
-    incorrectInput(lname);
+    turnOnIncorrectInput(lname);
     isCorrect = false;
   }
   if (isCorrect) {
+    turnOffIncorrectInput(lname);
+    turnOffIncorrectInput(fname);
     generateSuccessModal();
   }
 });
