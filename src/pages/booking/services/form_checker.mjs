@@ -22,7 +22,6 @@ function turnOffIncorrectInput(input) {
 function createModalBackground() {
   const modalBackground = document.createElement('div');
   modalBackground.classList.add('modal_background');
-  console.log('siema');
   return modalBackground;
 }
 

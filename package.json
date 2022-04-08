@@ -1,4 +1,7 @@
 {
+  "name": "travel-agency",
+  "version": "^1.0",
+  "author": "Piotr Ulanowski",
   "devDependencies": {
     "eslint": "^8.12.0",
     "eslint-config-airbnb-base": "^15.0.0",
@@ -6,6 +9,28 @@
     "html-validate": "^6.5.0"
   },
   "dependencies": {
-    "http-serve": "^1.0.1"
+    "express": "^4.17.3",
+    "http-serve": "^1.0.1",
+    "npm-watch": "^0.11.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pioula/TravelAgencyWebPage"
+  },
+  "watch": {
+    "eslint": {
+      "patterns": [
+        "src"
+      ],
+      "extensions": "js,mjs",
+      "ignore": "node_modules",
+      "runOnChangeOnly": true,
+      "clearBuffer": true
+    }
+  },
+  "scripts": {
+    "start": "npx http-serve",
+    "develop": "npm-watch eslint",
+    "eslint": "bash eslint_test.sh"
   }
 }

@@ -1,4 +1,4 @@
-let previousInput;
+/* let previousInput;
 
 document.addEventListener('click', (event) => {
   if (previousInput) {
@@ -9,8 +9,8 @@ document.addEventListener('click', (event) => {
     event.target.style.borderColor = 'azure';
     previousInput = event.target;
   }
-});
-/*
+}); */
+
 Element.prototype.addEventListeners = function (events, callback) {
   events.forEach((event) => {
     this.addEventListener(event, callback);
@@ -26,4 +26,4 @@ document.forms.booking_form
       // eslint-disable-next-line no-param-reassign
       event.target.style.borderColor = '';
     }
-  }); */
+  });
