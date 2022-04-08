@@ -11,6 +11,7 @@ document.addEventListener('click', (event) => {
   }
 }); */
 
+// eslint-disable-next-line func-names
 Element.prototype.addEventListeners = function (events, callback) {
   events.forEach((event) => {
     this.addEventListener(event, callback);

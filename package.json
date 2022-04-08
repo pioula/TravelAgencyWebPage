@@ -33,6 +33,6 @@
     "start": "npx http-serve",
     "develop": "npm-watch eslint",
     "eslint": "bash eslint_test.sh",
-    "server": "node ./src/services/express_server.mjs"
+    "server": "node index.mjs"
   }
 }

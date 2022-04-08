@@ -17,5 +17,6 @@ module.exports = {
     'max-classes-per-file': 'off',
     'no-prototype-builtins': 'off',
     'linebreak-style': 'off',
+    'import/extensions': 'off',
   },
 };
