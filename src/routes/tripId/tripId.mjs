@@ -1,8 +1,7 @@
 const tripIdRoute = {
   path: '/trip/:id',
   callback: (req, res) => {
-    console.log('Siema');
-    res.end();
+    res.render('tripId', { title: 'Hey', message: 'Hello' });
   },
 };
 
