@@ -11,7 +11,8 @@
   "dependencies": {
     "express": "^4.17.3",
     "http-serve": "^1.0.1",
-    "npm-watch": "^0.11.0"
+    "npm-watch": "^0.11.0",
+    "pug": "^3.0.2"
   },
   "repository": {
     "type": "git",
@@ -31,6 +32,7 @@
   "scripts": {
     "start": "npx http-serve",
     "develop": "npm-watch eslint",
-    "eslint": "bash eslint_test.sh"
+    "eslint": "bash eslint_test.sh",
+    "server": "node ./src/services/express_server.mjs"
   }
 }
