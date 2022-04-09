@@ -6,8 +6,8 @@ const tripDescriptionRouter = express.Router();
 
 tripDescriptionRouter.get('/query', tripDescriptionController.getQueryDescription);
 
-tripDescriptionRouter.get('/:trip_id', tripDescriptionController.getDescription);
+tripDescriptionRouter.get('/:trip_id(\\d+)', tripDescriptionController.getDescription);
 
-tripDescriptionRouter.get('/:trip_id/week/:week', tripDescriptionController.getWeekDescription);
+tripDescriptionRouter.get('/:trip_id(\\d+)/week/:week(\\d+)', tripDescriptionController.getWeekDescription);
 
 export default tripDescriptionRouter;

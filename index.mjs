@@ -1,5 +1,3 @@
-/* eslint-disable import/extensions */
-
 import express from 'express';
 
 import helloWorldRouter from './src/routes/helloWorld.router.mjs';
@@ -15,6 +13,11 @@ app.use(express.static('src\\public'));
 app.use('/strona-testowa', helloWorldRouter);
 app.use('/trip', tripDescriptionRouter);
 
-app.listen(port, '0.0.0.0', () => {
+// eslint-disable-next-line no-unused-vars
+app.use((err, req, res, next) => {
+  res.render('error', { error: err });
+});
+
+app.listen(port, () => {
   console.log(`Listening at http://localhost:${port}`);
 });

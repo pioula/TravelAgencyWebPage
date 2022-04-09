@@ -13,8 +13,8 @@ const tripDescriptionController = {
       { trip_id: `${req.params.trip_id}`, week: `${req.params.week}` },
     );
   },
-  // localhost:port/tripq?trip_id=6&week=8
-  getQueryDescription: (req, res) => {
+  // localhost:port/trip/query?trip_id=6&week=8
+  getQueryDescription: (req, res, next) => {
     if (req.query.trip_id && req.query.week) {
       res.status(200).render(
         'tripWeekDescription',
@@ -26,9 +26,8 @@ const tripDescriptionController = {
         { trip_id: `${req.query.trip_id}` },
       );
     } else {
-      res.status(404).render('error');
+      next(404);
     }
-    res.end();
   },
 };
 

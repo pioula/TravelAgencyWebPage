@@ -30,9 +30,8 @@
     }
   },
   "scripts": {
-    "start": "npx http-serve",
+    "start": "node index.mjs",
     "develop": "npm-watch eslint",
-    "eslint": "bash eslint_test.sh",
-    "server": "node index.mjs"
+    "eslint": "bash eslint_test.sh"
   }
 }
