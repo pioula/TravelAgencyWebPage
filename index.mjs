@@ -13,9 +13,12 @@ app.use(express.static('src\\public'));
 app.use('/strona-testowa', helloWorldRouter);
 app.use('/trip', tripDescriptionRouter);
 
+app.use((req, res, next) => {
+  next(404);
+});
 // eslint-disable-next-line no-unused-vars
 app.use((err, req, res, next) => {
-  res.render('error', { error: err });
+  res.status(err).render('error', { error: err });
 });
 
 app.listen(port, () => {

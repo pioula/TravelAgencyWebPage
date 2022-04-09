@@ -30,7 +30,7 @@
     }
   },
   "scripts": {
-    "start": "node index.mjs",
+    "start": "nodemon -e js,pug,mjs,css,html,json index.mjs",
     "develop": "npm-watch eslint",
     "eslint": "bash eslint_test.sh"
   }
